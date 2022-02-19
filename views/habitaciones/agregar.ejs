@@ -1,0 +1,46 @@
+<%- include("../header"); %>
+<div class="col-12">
+    <h1>Agregar habitacion</h1>
+    <form method="post" action="/habitaciones/insertar">
+        <div class="form-group">
+            <label for="nombre">Numero De Habitacion</label>
+            <input required id="NumeroHabitacion" placeholder="Numero de habitacion" class="form-control" type="number"
+                name="numerodehabitacion">
+        </div>
+        <div class="form-group">
+            <label for="Imagenes">Imagenes</label>
+            <input required id="Imagenes" placeholder="imagen.jpg" class="form-control" type="text"
+                name="Imagenes">
+        </div>
+        <div class="form-group">
+            <label for="Descripcion">Descripcion</label>
+            <input required id="Descripcion" placeholder="Descripcion" class="form-control" type="text"
+                name="Descripcion">
+        </div>
+        <div class="form-group">
+            <label for="Precio">Precio</label>
+            <input required id="Precio" placeholder="Precio" class="form-control" type="number"
+                name="Precio">
+        </div>
+        <div class="form-group">
+            <label for="Precio">Precio</label>
+            <input required id="Precio" placeholder="Precio" class="form-control" type="number"
+                name="Precio">
+        </div>
+        <br>
+        
+        <select name="select">
+            <option value="planbasico">Plan Basico</option>
+            <option value="planestandar" selected>Plan Estandar</option>
+            <option value="planfull">Plan Full</option>
+          </select>
+          <br>
+          <br>
+        <div class="form-group">
+            <button class="btn btn-success">Guardar</button>
+            &nbsp;<a href="/habitaciones" class="btn btn-primary">Volver</a>
+        </div>
+        
+    </form>
+</div>
+<%- include("../footer"); %>

@@ -1,0 +1,34 @@
+<%- include("../header"); %>
+<div class="col-12">
+    <h1>Habitaciones</h1>
+    <a href="/habitaciones/agregar" class="btn btn-primary mb-2">Agregar</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Numero De Habitacion</th>
+                <th>Imagenes</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% habitaciones.forEach(habitacion => { %>
+            <tr>
+                <td><%= habitacion.numerodehabitacion %></td>
+                <td><%= habitacion.Imagenes %></td>
+                <td>
+                    <a href="/habitaciones/editar/<%= habitacion.id %>" class="btn btn-warning">
+                        Editar
+                    </a>
+                </td>
+                <td>
+                    <a href="/habitaciones/eliminar/<%= habitacion.id %>" class="btn btn-danger">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+            <% })%>
+        </tbody>
+    </table>
+</div>
+<%- include("../footer"); %>
